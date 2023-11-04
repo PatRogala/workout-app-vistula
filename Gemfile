@@ -47,6 +47,13 @@ group :development, :test do
 
   # dotenv loads environment variables from .env into ENV
   gem "dotenv-rails"
+
+  # factory_bot_rails provides integration between
+  # FactoryBot and Rails for creating database models
+  gem "factory_bot_rails"
+
+  # faker generates fake data for testing
+  gem "faker"
 end
 
 group :development do
