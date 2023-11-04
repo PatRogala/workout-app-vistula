@@ -10,14 +10,12 @@ module UsersHelper
   end
 
   def weight_diagram(user)
-    content_tag :div, class: "weight-diagram" do
-      content_tag :span do
-        "#{user.weight - 1}"
-      end
-      "#{user.weight}"
-      content_tag :span do
-        "#{user.weight + 1}"
-      end
-    end
+    "
+      <div class='weight-diagram'>
+        <span>#{user.weight - 1}</span>
+        #{user.weight}
+        <span>#{user.weight + 1}</span>
+      </div>
+    ".html_safe
   end
 end

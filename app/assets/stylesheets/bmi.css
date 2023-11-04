@@ -1,6 +1,6 @@
 .bmi-panel {
   grid-column-start: 1;
-  grid-column-end: span 4;
+  grid-column-end: span 5;
   grid-row-start: 1;
   grid-row-end: span 10;
   background-color: var(--success-color);
@@ -36,9 +36,10 @@
   position: relative;
 }
 
-.bmi-panel .user-gender h2, .bmi-panel .user-weight h2 {
+.bmi-panel h2 {
   position: absolute;
   top: 0;
+  font-size: 14px;
 }
 
 .bmi-panel .user-weight {
@@ -55,4 +56,36 @@
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.bmi-panel .user-height {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: span 4;
+  background-color: var(--dark-color);
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.weight-diagram {
+  color: var(--dark-color);
+  background-color: var(--success-color);
+  font-size: 22px;
+  font-weight: bold;
+  padding: 30px 20px;
+  border-radius: 40px;
+  margin-top: 15px;
+}
+
+.weight-diagram span {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: normal;
+  font-size: 18px;
 }
