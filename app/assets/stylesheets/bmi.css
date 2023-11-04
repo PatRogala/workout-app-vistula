@@ -2,9 +2,57 @@
   grid-column-start: 1;
   grid-column-end: span 4;
   grid-row-start: 1;
-  grid-row-end: span 6;
+  grid-row-end: span 10;
   background-color: var(--success-color);
   box-sizing: border-box;
   padding: 5px 30px;
   color: var(--dark-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fill, 70px);
+  grid-gap: 20px;
+}
+
+.bmi-panel h1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.bmi-panel .user-gender {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  background-color: var(--dark-color);
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bmi-panel .user-gender h2, .bmi-panel .user-weight h2 {
+  position: absolute;
+  top: 0;
+}
+
+.bmi-panel .user-weight {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: span 2;
+  background-color: var(--dark-color);
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }

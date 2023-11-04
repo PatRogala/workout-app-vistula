@@ -5,6 +5,14 @@
     <p>Enter your height and weight to calculate your BMI.</p>
     <p>You can do that on the <%= link_to 'Edit Profile', edit_user_path(current_user) %> page.</p>
   <% else %>
-    TODO!
+    <div class="user-gender">
+      <h2>Gender</h2>
+      <%= gender_image(current_user) %>
+    </div>
+
+    <div class="user-weight">
+      <h2>Weight</h2>
+      <%= weight_diagram(current_user) %>
+    </div>
   <% end %>
 </div>

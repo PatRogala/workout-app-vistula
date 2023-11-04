@@ -21,4 +21,12 @@ class User < ApplicationRecord
   def overweight?
     BmiCalculator.new(self).overweight?
   end
+
+  def male?
+    gender == "M"
+  end
+
+  def female?
+    gender == "F"
+  end
 end
