@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe BmiCalculator do
   let(:user) { create(:user, height: 175, weight: 70) }
-  let(:bmi_calculator) { BmiCalculator.new(user) }
+  let(:bmi_calculator) { described_class.new(user) }
 
   describe "#bmi" do
     context "when user has height and weight" do

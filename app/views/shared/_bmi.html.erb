@@ -3,7 +3,7 @@
 
   <% if current_user.bmi.nil? %>
     <p>Enter your height and weight to calculate your BMI.</p>
-    <p>You can do that on the Edit Profile page.</p>
+    <p>You can do that on the <%= link_to 'Edit Profile', edit_user_path(current_user) %> page.</p>
   <% else %>
     TODO!
   <% end %>

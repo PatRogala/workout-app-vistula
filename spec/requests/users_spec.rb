@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe "Users", type: :request do
+RSpec.describe "Users" do
   describe "GET /index" do
     context "when user is not logged in" do
       it "redirects to login page" do
