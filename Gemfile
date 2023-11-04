@@ -88,3 +88,7 @@ gem "rubocop"
 gem "rubocop-rails"
 gem "rubocop-rspec"
 gem "rubocop-performance"
+
+# Devise is a flexible authentication solution
+# for Rails based on Warden
+gem "devise", "~> 4.9"
