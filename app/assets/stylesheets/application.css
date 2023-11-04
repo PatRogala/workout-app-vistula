@@ -26,8 +26,9 @@ body {
   margin-left: 150px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 10px;
-  padding: 10px;
+  grid-template-rows: 200px;
+  grid-gap: 30px;
+  padding: 50px;
 }
 
 .icon {

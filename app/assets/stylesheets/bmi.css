@@ -1,0 +1,10 @@
+.bmi-panel {
+  grid-column-start: 1;
+  grid-column-end: span 4;
+  grid-row-start: 1;
+  grid-row-end: span 6;
+  background-color: var(--success-color);
+  box-sizing: border-box;
+  padding: 5px 30px;
+  color: var(--dark-color);
+}
