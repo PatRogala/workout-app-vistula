@@ -2,8 +2,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  VALID_GENDERS = ["F", "M"].freeze
+
   validates :email, presence: true
   validates :reset_password_token, uniqueness: true, allow_nil: true
+  validates :gender, inclusion: { in: VALID_GENDERS }, allow_nil: true
 
   def bmi
     return nil if height.nil? || weight.nil?
