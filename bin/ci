@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -e
+
+echo "[ bin/ci ] Running tests"
+bin/rails spec
+
+echo "[ bin/ci ] Analyzing code for security vulnerabilities"
+echo "[ bin/ci ] Output will be in tmp/brakeman.html which"
+echo "[ bin/ci ] can be opened in your browser."
+bundle exec brakeman -q -o tmp/brakeman.html
+
+echo "[ bin/ci ] Analyzing Ruby gems for"
+echo "[ bin/ci ] security vulnerabilities"
+bundle exec bundle audit check --update
+
+echo "[ bin/ci ] Checking style with Rubocop"
+bundle exec rubocop
+
+echo "[ bin/ci ] Checking for inconsistencies and inefficiencies"
+echo "[ bin/ci ] between your models and database schema"
+bundle exec database_consistency
+
+echo "[ bin/ci ] Done"

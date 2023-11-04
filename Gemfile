@@ -48,6 +48,9 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
 
+  # Testing framework alternative to Minitest
+  gem "rspec-rails", "~> 6.0.0"
+
   # dotenv loads environment variables from .env into ENV
   gem "dotenv-rails"
 end
@@ -73,3 +76,18 @@ end
 # Brakeman analyzes our code
 # for security vulnerabilities
 gem "brakeman"
+
+# bundler-audit enables bundle audit which analyzes our
+# dependencies for known vulnerabilities
+gem "bundler-audit"
+
+# lograge changes Rails' logging to a more
+# traditional one-line-per-event format
+gem "lograge"
+
+# rubocop is a static code analyzer that enforces
+# the Ruby Style Guide
+gem "rubocop"
+gem "rubocop-rails"
+gem "rubocop-rspec"
+gem "rubocop-performance"
