@@ -1,24 +1,29 @@
-# README
+# Vistula Workout App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p align="center">
 
-Things you may want to cover:
+  ![Ruby](https://img.shields.io/badge/Ruby-v3.2+-red.svg)
+  ![Rails](https://img.shields.io/badge/Rails-v7.1+-darkred.svg)
 
-* Ruby version
+</p>
 
-* System dependencies
+## Setup
 
-* Configuration
+1. Pull down the app from version control
+2. Make sure you have Postgres running
+3. 'bin/setup'
 
-* Database creation
+## Running the app
 
-* Database initialization
+1. 'redis-server'
+2. 'bundle exec sidekiq'
+3. 'bin/run'
 
-* How to run the test suite
+## Tests and CI
+1. 'bin/ci' contains all the tests and checks for the app
+2. 'tmp/test.log' will use the production logging format *not* the development one.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Production
 
-* Deployment instructions
-
-* ...
+* All runtime configuration should be supplied in the UNIX environment
+* Rails logging uses lograge. 'bin/setup help' can tell you how to see this locally

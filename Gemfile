@@ -69,3 +69,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Brakeman analyzes our code
+# for security vulnerabilities
+gem "brakeman"
