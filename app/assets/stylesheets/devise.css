@@ -1,0 +1,38 @@
+.devise {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.devise-form {
+  background-color: white;
+  padding: 50px;
+  color: black;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+}
+
+
+.devise-form a, .devise-form a:visited {
+  color: var(--primary-color);
+}
+
+.devise-form input {
+  background-color: #f2f2f2;
+  border: none;
+  font-size: 22px;
+  padding: 5px;
+}
+
+.devise-form .field {
+  margin-bottom: 20px;
+}
+
+.devise-form input[type="submit"] {
+  width: 100%;
+  background-color: var(--success-color);
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+}
