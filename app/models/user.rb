@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :reset_password_token, uniqueness: true, allow_nil: true
 
   def bmi
-    return 0 if height.nil? || weight.nil?
+    return nil if height.nil? || weight.nil?
 
     BmiCalculator.new(self).bmi
   end

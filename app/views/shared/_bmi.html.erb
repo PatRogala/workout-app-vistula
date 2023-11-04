@@ -1,7 +1,7 @@
 <div class="bmi-panel">
   <h1>BMI Calculator</h1>
 
-  <% if current_user.bmi == 0 %>
+  <% if current_user.bmi.nil? %>
     <p>Enter your height and weight to calculate your BMI.</p>
     <p>You can do that on the Edit Profile page.</p>
   <% else %>

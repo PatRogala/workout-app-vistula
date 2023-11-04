@@ -12,7 +12,7 @@ class BmiCalculator
   end
 
   def bmi
-    weight / (height * height)
+    (weight / ((height / 100.0) ** 2)).to_f.round(2)
   end
 
   def underweight?
