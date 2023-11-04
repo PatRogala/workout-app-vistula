@@ -12,6 +12,23 @@
 }
 
 .navbar a {
-  border-bottom: 2px solid var(--success-color);
   padding: 10px;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.navbar a img {
+  filter: grayscale(100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar a.active, .navbar a:hover {
+  border-bottom: 2px solid var(--success-color);
+}
+
+.navbar a.active img, .navbar a:hover img {
+  filter: grayscale(0%);
 }

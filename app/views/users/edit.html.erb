@@ -1,1 +1,6 @@
-ELO
+<%= form_for @user do |f| %>
+  <%= f.number_field :age %>
+  <%= f.number_field :height %>
+  <%= f.number_field :weight %>
+  <%= f.submit %>
+<% end %>
