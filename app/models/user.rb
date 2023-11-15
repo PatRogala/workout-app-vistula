@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+          :recoverable, :rememberable, :validatable
 
   VALID_GENDERS = ["F", "M"].freeze
 
@@ -8,18 +8,10 @@ class User < ApplicationRecord
   validates :reset_password_token, uniqueness: true, allow_nil: true
   validates :gender, inclusion: { in: VALID_GENDERS }, allow_nil: true
 
-  def bmi
-    return nil if height.nil? || weight.nil?
+  delegate :bmi, :underweight?, :overweight?, to: :bmi_calculator
 
-    BmiCalculator.new(self).bmi
-  end
-
-  def underweight?
-    BmiCalculator.new(self).underweight?
-  end
-
-  def overweight?
-    BmiCalculator.new(self).overweight?
+  def bmi_calculator
+    BmiCalculator.new(self)
   end
 
   def male?
