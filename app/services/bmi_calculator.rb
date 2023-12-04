@@ -12,6 +12,8 @@ class BmiCalculator
   end
 
   def bmi
+    return nil if height.nil? || weight.nil?
+
     (weight / ((height / 100.0)**2)).to_f.round(2)
   end
 

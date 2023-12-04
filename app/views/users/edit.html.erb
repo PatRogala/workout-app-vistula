@@ -1,6 +1,28 @@
-<%= form_for @user do |f| %>
-  <%= f.number_field :age %>
-  <%= f.number_field :height %>
-  <%= f.number_field :weight %>
-  <%= f.submit %>
-<% end %>
+<section class="w-[95%] m-auto mt-[80px] flex justify-center items-center h-[90vh]">
+  <div class="w-full flex justify-center items-center flex-col">
+    <h2 class="text-[25px] font-[500] font-Poppins text-center py-2 mb-2">Update your Information</h2>
+
+    <%= form_for(@user) do |f| %>
+      <%= render "devise/shared/error_messages", resource: @user %>
+
+      <div class="mt-5">
+        <%= f.label :age, "Enter your Age", class: "text-[16px]" %>
+        <%= f.number_field :age, autofocus: true, placeholder: "21", class: "w-full bg-transparent border rounded h-[40px] px-2 outline-none mt-[10px] font-Poppins" %>
+      </div>
+
+      <div class="mt-5">
+        <%= f.label :weight, "Enter your Weight (in KG)", class: "text-[16px]" %>
+        <%= f.number_field :weight, autofocus: true, placeholder: "80", class: "w-full bg-transparent border rounded h-[40px] px-2 outline-none mt-[10px] font-Poppins" %>
+      </div>
+
+      <div class="mt-5">
+        <%= f.label :height, "Enter your Height (in cm)", class: "text-[16px]" %>
+        <%= f.number_field :height, autofocus: true, placeholder: "185", class: "w-full bg-transparent border rounded h-[40px] px-2 outline-none mt-[10px] font-Poppins" %>
+      </div>
+
+      <div class="mt-5">
+        <%= f.submit "Save Changes", class: "py-3 px-6 rounded-full cursor-pointer bg-[#2190ff] min-h-[45px] w-full text-[16px] font-Poppins font-semibold" %>
+      </div>
+    <% end %>
+  </div>
+</section>

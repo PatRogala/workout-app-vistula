@@ -1,22 +1,28 @@
-<div class="bmi-panel">
-  <h1>BMI Calculator</h1>
+<div class="bg-[#b3f180]">
+  <h1 class="text-3xl font-bold mb-5 text-black">BMI Calculator</h1>
 
   <% if current_user.bmi.nil? %>
-    <p>Enter your height and weight to calculate your BMI.</p>
-    <p>You can do that on the <%= link_to 'Edit Profile', edit_user_path(current_user) %> page.</p>
+    <p class="text-black">Enter your height and weight to calculate your BMI.</p>
+    <p class="text-black">You can do that on the <%= link_to 'Edit Profile', edit_user_path(current_user), class: "text-[#5745b7] hover:underline font-bold" %> page.</p>
   <% else %>
-    <div class="user-gender">
-      <h2>Gender</h2>
-      <%= gender_image(current_user) %>
-    </div>
+    <h2 class="text-black font-semibold mb-5">Your BMI is <span class="font-bold text-[24px]"><%= current_user.bmi %><span></h2>
+    <div class="flex flex-wrap gap-10">
+      <div>
+        <div class="bg-black p-5 flex flex-col items-center justify-center relative">
+          <h2 class="absolute top-1 font-semibold">Gender</h2>
+          <%= gender_image(current_user) %>
+        </div>
 
-    <div class="user-weight">
-      <h2>Weight</h2>
-      <%= weight_diagram(current_user) %>
-    </div>
+        <div class="bg-black p-5 flex flex-col items-center justify-center relative mt-5">
+          <h2 class="absolute top-1 font-semibold">Weight</h2>
+          <%= weight_diagram(current_user) %>
+        </div>
+      </div>
 
-    <div class="user-height">
-      <h2>Height</h2>
+      <div class="bg-black p-5 flex flex-col items-center justify-center relative">
+        <h2 class="absolute top-1 font-semibold">Height</h2>
+        <%= height_diagram(current_user) %>
+      </div>
     </div>
   <% end %>
 </div>
