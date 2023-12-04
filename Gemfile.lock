@@ -306,6 +306,12 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     stringio (3.0.8)
+    tailwindcss-rails (2.0.32-aarch64-linux)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.32-arm64-darwin)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.32-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.3.0)
     timeout (0.4.0)
     tzinfo (2.0.6)
@@ -357,6 +363,7 @@ DEPENDENCIES
   rubocop-rspec
   selenium-webdriver
   sprockets-rails
+  tailwindcss-rails
   tzinfo-data
   web-console
 
