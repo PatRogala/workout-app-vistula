@@ -9,9 +9,14 @@ class User < ApplicationRecord
   validates :gender, inclusion: { in: VALID_GENDERS }, allow_nil: true
 
   delegate :bmi, :underweight?, :overweight?, to: :bmi_calculator
+  delegate :bmr, to: :bmr_calculator
 
   def bmi_calculator
     BmiCalculator.new(self)
+  end
+
+  def bmr_calculator
+    BmrCalculator.new(self)
   end
 
   def male?

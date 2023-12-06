@@ -6,7 +6,7 @@
     <p class="text-black">You can do that on the <%= link_to 'Edit Profile', edit_user_path(current_user), class: "text-[#5745b7] hover:underline font-bold" %> page.</p>
   <% else %>
     <h2 class="text-black font-semibold mb-5">Your BMI is <span class="font-bold text-[24px]"><%= current_user.bmi %><span></h2>
-    <div class="flex flex-wrap gap-10">
+    <div class="flex flex-wrap gap-10 justify-center">
       <div>
         <div class="bg-black p-5 flex flex-col items-center justify-center relative">
           <h2 class="absolute top-1 font-semibold">Gender</h2>

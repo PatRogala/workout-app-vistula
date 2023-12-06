@@ -1,34 +1,25 @@
-<!-- Make it full screen flex column centered -->
-
 <div class="h-min-screen w-[90%] mx-auto mt-[100px]">
   <div class="gap-4 flex flex-wrap flex-col md:flex-row">
-    <div class="bg-[#b3f180] p-5 rounded md:max-w-[400px] w-full">
+    <div class="bg-[#b3f180] p-5 rounded md:max-w-[400px] lg:max-w-[25%] w-full">
       <%= render 'shared/bmi' %>
     </div>
 
-    <div class="bg-gray-900 rounded p-5">
-      <h2 class="text-2xl font-semibold mb-4">Recipes</h2>
-      <!-- Recipe items can go here -->
+    <div class="bg-[#b96346] p-5 rounded md:max-w-[400px] lg:max-w-[25%] w-full">
+      <%= render 'shared/bmr' %>
+    </div>
+
+    <div class="p-5 rounded md:max-w-[400px] lg:max-w-[47%] w-full">
+      <%= render 'shared/macro_demand' %>
     </div>
   </div>
 
   <div class="mt-8 bg-gray-900 p-5 rounded">
-    <h2 class="text-2xl font-semibold mb-4">Food</h2>
+    <h2 class="text-2xl font-semibold mb-4">Recipes</h2>
     <!-- Food items can go here -->
   </div>
 
   <div class="mt-8 bg-gray-900 p-5 rounded">
-    <h2 class="text-2xl font-semibold mb-4">Weight</h2>
+    <h2 class="text-2xl font-semibold mb-4">Workouts</h2>
     <!-- Weight items can go here -->
-  </div>
-
-  <div class="mt-8 bg-gray-900 p-5 rounded">
-    <h2 class="text-2xl font-semibold mb-4">Height</h2>
-    <!-- Height items can go here -->
-  </div>
-
-  <div class="mt-8 bg-gray-900 p-5 rounded">
-    <h2 class="text-2xl font-semibold mb-4">Calories</h2>
-    <!-- Calories items can go here -->
   </div>
 </div>
