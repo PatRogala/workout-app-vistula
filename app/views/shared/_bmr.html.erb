@@ -1,0 +1,13 @@
+<div>
+  <h1 class="text-3xl font-bold mb-5 text-white">BMR Calculator</h1>
+
+  <% if current_user.bmr.nil? %>
+    <p class="text-white">Enter your height, weight, age and gender to calculate your BMR.</p>
+    <p class="text-white">You can do that on the <%= link_to 'Edit Profile', edit_user_path(current_user), class: "text-[#5745b7] hover:underline font-bold" %> page.</p>
+  <% else %>
+    <h2 class="text-white font-semibold mb-5">Your BMR is <span class="font-bold text-[24px]"><%= current_user.bmr %><span></h2>
+    <p class="text-white">That means you need to consume <span class="font-bold text-[18px]"><%= current_user.bmr + 500 %></span> calories to gain weight and <span class="font-bold text-[18px]"><%= current_user.bmr - 500 %></span> calories to lose weight.</p>
+
+    <p class="mt-4">Your meals should be divided into 5-6 meals a day. Each meal should be around <span class="font-bold text-[18px]"><%= (current_user.bmr + 500) / 5 %></span> calories.</p>
+  <% end %>
+</div>

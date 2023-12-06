@@ -21,6 +21,13 @@
       </div>
 
       <div class="mt-5">
+        <%= f.radio_button :gender, 'M' %>
+        <%= f.label :gender, 'Male', value: 'M', class: "mr-3" %>
+        <%= f.radio_button :gender, 'F' %>
+        <%= f.label :gender, 'Female', value: 'F' %>
+      </div>
+
+      <div class="mt-5">
         <%= f.submit "Save Changes", class: "py-3 px-6 rounded-full cursor-pointer bg-[#2190ff] min-h-[45px] w-full text-[16px] font-Poppins font-semibold" %>
       </div>
     <% end %>
