@@ -49,8 +49,8 @@ The project plans to introduce two new panels:
 ## Technologies used
 The application was built using:
 - Programming language: Ruby
-- Framework: TBD
-- Database: TBD
+- Framework: Ruby on Rails
+- Database: PostgreSQL
 
 ## Production
 
