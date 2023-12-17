@@ -26,26 +26,17 @@ The project plans to introduce two new panels:
 
 ### Flow of OAuth 2.0 Authentication
 
-1. **Client** requests authorization from the **Authorization Server**:
-   - Authorization request includes identity and credentials.
-  
-2. **Authorization Server** provides Authorization Grant to the **Client**:
-   - Authorization Grant is sent back to the **Client**.
+```mermaid
+sequenceDiagram
+    Client->>Authorization_Server: 1. Request Authorization
+    Authorization_Server-->>Client: 2. Authorization Grant
+    Client->>Authorization_Server: 3. Request Access Token
+    Authorization_Server-->>Client: 4. Access Token
+    Client->>Resource_Server: 5. Resource Request with Access Token
+    Resource_Server-->>Authorization_Server: 6. Access Token Validation
+    Authorization_Server-->>Resource_Server: 7. Access to Protected Resources
+```
 
-3. **Client** requests an Access Token from the **Authorization Server**:
-   - Access Token request includes the Authorization Grant.
-   
-4. **Authorization Server** sends an Access Token to the **Client**:
-   - Access Token is sent back to the **Client**.
-
-5. **Client** sends a Resource request to the **Resource Server** along with the Access Token:
-   - Resource request includes the Access Token.
-   
-6. **Resource Server** communicates with the **Authorization Server** to validate the Access Token:
-   - Access Token validation and verification process occur between the **Resource Server** and the **Authorization Server**.
-
-7. **Resource Server** grants access to Protected Resources to the **Client** based on token validation:
-   - Access is granted if the Access Token is valid.
 
 ## Built With
 
