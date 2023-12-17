@@ -24,6 +24,29 @@ The project plans to introduce two new panels:
 - **Panel with recipes:** Will allow users to access healthy recipes according to their caloric needs and dietary preferences.
 - **Exercise panel:** Will provide users with the ability to plan and execute a variety of workouts, taking into account their fitness level and goals.
 
+### Flow of OAuth 2.0 Authentication
+
+1. **Client** requests authorization from the **Authorization Server**:
+   - Authorization request includes identity and credentials.
+  
+2. **Authorization Server** provides Authorization Grant to the **Client**:
+   - Authorization Grant is sent back to the **Client**.
+
+3. **Client** requests an Access Token from the **Authorization Server**:
+   - Access Token request includes the Authorization Grant.
+   
+4. **Authorization Server** sends an Access Token to the **Client**:
+   - Access Token is sent back to the **Client**.
+
+5. **Client** sends a Resource request to the **Resource Server** along with the Access Token:
+   - Resource request includes the Access Token.
+   
+6. **Resource Server** communicates with the **Authorization Server** to validate the Access Token:
+   - Access Token validation and verification process occur between the **Resource Server** and the **Authorization Server**.
+
+7. **Resource Server** grants access to Protected Resources to the **Client** based on token validation:
+   - Access is granted if the Access Token is valid.
+
 ## Built With
 
 [![Ruby][Ruby]][Ruby-url]
