@@ -24,6 +24,12 @@ The project plans to introduce two new panels:
 - **Panel with recipes:** Will allow users to access healthy recipes according to their caloric needs and dietary preferences.
 - **Exercise panel:** Will provide users with the ability to plan and execute a variety of workouts, taking into account their fitness level and goals.
 
+### Technical elements of the application:
+The application model consists of:
+1. user interface, through which the user explores the visual elements of www.workoutapp.pl and interacts with the elements in the backend (Backend). More details about the user interface will be included in the User Story section.
+2. Hosting is a service that involves providing server space for a website and its resources. It allows to publication of both a website and an application. It is based on sharing disk space on a physical server, which can be shared by multiple users simultaneously. The solution is just enough for our project needs.
+3. PostgreSQL database, in which tables are relationally linked to each other through the use of Primary Keys, Foreign Keys, and Composite Keys.
+
 ### Flow of OAuth 2.0 Authentication
 
 ```mermaid
@@ -34,9 +40,43 @@ sequenceDiagram
     Authorization_Server-->>Client: 4. Access Token
     Client->>Resource_Server: 5. Resource Request with Access Token
     Resource_Server-->>Authorization_Server: 6. Access Token Validation
-    Authorization_Server-->>Resource_Server: 7. Access to Protected Resources
+    Resource_Server-->>Client: 7. Access to Protected Resources
 ```
+1. **Client** requests authorization from the **Authorization Server**:
+   - Authorization request includes identity and credentials.
+  
+2. **Authorization Server** provides Authorization Grant to the **Client**:
+   - Authorization Grant is sent back to the **Client**.
 
+3. **Client** requests an Access Token from the **Authorization Server**:
+   - Access Token request includes the Authorization Grant.
+   
+4. **Authorization Server** sends an Access Token to the **Client**:
+   - Access Token is sent back to the **Client**.
+
+5. **Client** sends a Resource request to the **Resource Server** along with the Access Token:
+   - Resource request includes the Access Token.
+   
+6. **Resource Server** communicates with the **Authorization Server** to validate the Access Token:
+   - Access Token validation and verification process occur between the **Resource Server** and the **Authorization Server**.
+
+7. **Resource Server** grants access to Protected Resources to the **Client** based on token validation:
+   - Access is granted if the Access Token is valid.
+
+### Network model
+
+```mermaid
+flowchart TD
+    A[User] <-->|Login| B(Domain)
+    B <--> C{Hosting}
+    C <-->|request| D[DB]
+```
+1. **User** starts a link with the target server. The client connects via a registered domain name to www.workoutapp.pl.
+   - **User** login or create a new account request.
+   - After completing login/signup the resources are visible for the **User**
+2. **Hosting** is a part of the server, dedicated with allocated parameters that are also a dedicated part of the server's power and capacity
+   - **User** can use all the allocated resources of the machine: all its computing power, RAM, or disk space. For our project needs, we do not need more than just some resources of the one machine that connects to the database.
+3. The machine connects with **DB** and through requests demands and receives the required data
 
 ## Built With
 
