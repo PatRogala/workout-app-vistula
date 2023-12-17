@@ -44,19 +44,19 @@ sequenceDiagram
 ```
 1. **Client** requests authorization from the **Authorization Server**:
    - Authorization request includes identity and credentials.
-  
+
 2. **Authorization Server** provides Authorization Grant to the **Client**:
    - Authorization Grant is sent back to the **Client**.
 
 3. **Client** requests an Access Token from the **Authorization Server**:
    - Access Token request includes the Authorization Grant.
-   
+
 4. **Authorization Server** sends an Access Token to the **Client**:
    - Access Token is sent back to the **Client**.
 
 5. **Client** sends a Resource request to the **Resource Server** along with the Access Token:
    - Resource request includes the Access Token.
-   
+
 6. **Resource Server** communicates with the **Authorization Server** to validate the Access Token:
    - Access Token validation and verification process occur between the **Resource Server** and the **Authorization Server**.
 
@@ -124,7 +124,11 @@ As a registered user of the workout website,
 I want to be able to update my personal information such as width and height on my profile
 so that the fitness calculations are accurate and tailored to my specific body metrics.
 
+![Main panel](./screens/main_panel.png)
+
 ## Scenario 1: Updating Profile Information
+
+![Edit user](./screens/edit_user.png)
 
 1. Given that I am logged into the workout website, when I navigate to the "Edit Profile" section,
 then I should see fields to input my width and height.
@@ -134,6 +138,9 @@ then my profile information should be successfully updated with the new values.
 then I should receive a clear error message guiding me to input valid data.
 
 ## Scenario 2: Accessing BMR Calculator
+
+<img src="./screens/bmr_invalid.png" width="200" />
+<img src="./screens/bmr_valid.png" width="200" />
 
 1. Given that I am logged into the workout website and have updated my profile information,
 when I navigate to the "BMR Calculator" section,
@@ -145,6 +152,9 @@ then the website should display my BMR value accurately based on the entered inf
 then I should receive clear error messages guiding me to provide the necessary information.
 
 ## Scenario 3: Accessing BMI Calculator
+
+<img src="./screens/bmi_invalid.png" width="200" />
+<img src="./screens/bmi_valid.png" width="200" />
 
 1. Given that I am logged into the workout website and have updated my profile information,
 when I navigate to the "BMI Calculator" section,

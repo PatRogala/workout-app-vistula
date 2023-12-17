@@ -2,7 +2,7 @@
 
 class DeviseCreateUsers < ActiveRecord::Migration[7.1]
   def change
-    drop_table :users
+    drop_table :users if table_exists? :users
 
     create_table :users do |t|
       ## Database authenticatable
