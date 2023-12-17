@@ -78,6 +78,82 @@ flowchart TD
    - **User** can use all the allocated resources of the machine: all its computing power, RAM, or disk space. For our project needs, we do not need more than just some resources of the one machine that connects to the database.
 3. The machine connects with **DB** and through requests demands and receives the required data
 
+# Class Diagrams
+
+```mermaid
+classDiagram
+  class User {
+    +email: string
+    +encrypted_password: string
+    +reset_password_token: string
+    +reset_password_sent_at: datetime
+    +remember_created_at: datetime
+    +created_at: datetime
+    +updated_at: datetime
+    +gender: string
+    +age: integer
+    +weight: integer
+    +height: integer
+    +VALID_GENDERS: Array<string>
+    +bmi_calculator(): BmiCalculator
+    +bmr_calculator(): BmrCalculator
+    +male?(): boolean
+    +female?(): boolean
+  }
+
+  class BmiCalculator {
+    +initialize(user: User): void
+    +bmi(): number
+    +underweight?(): boolean
+    +overweight?(): boolean
+  }
+
+  class BmrCalculator {
+    +initialize(user: User): void
+    +bmr(): number
+  }
+
+  User -- BmiCalculator: has
+  User -- BmrCalculator: has
+```
+
+
+# User story
+As a registered user of the workout website,
+
+I want to be able to update my personal information such as width and height on my profile
+so that the fitness calculations are accurate and tailored to my specific body metrics.
+
+## Scenario 1: Updating Profile Information
+
+1. Given that I am logged into the workout website, when I navigate to the "Edit Profile" section,
+then I should see fields to input my width and height.
+2. When I input my width and height values, and click the "Save" button,
+then my profile information should be successfully updated with the new values.
+3. If I input invalid or inappropriate values (e.g., negative values, non-numeric characters),
+then I should receive a clear error message guiding me to input valid data.
+
+## Scenario 2: Accessing BMR Calculator
+
+1. Given that I am logged into the workout website and have updated my profile information,
+when I navigate to the "BMR Calculator" section,
+then I should be able to access the calculator to determine my Basal Metabolic Rate (BMR).
+2. After inputting any required data, such as age, gender, and activity level,
+when I click the "Calculate" button,
+then the website should display my BMR value accurately based on the entered information.
+3. If I input incomplete or invalid data into the BMR calculator,
+then I should receive clear error messages guiding me to provide the necessary information.
+
+## Scenario 3: Accessing BMI Calculator
+
+1. Given that I am logged into the workout website and have updated my profile information,
+when I navigate to the "BMI Calculator" section,
+then I should be able to access the calculator to determine my Body Mass Index (BMI).
+2. After inputting my weight and height, when I click the "Calculate" button,
+then the website should display my BMI value accurately based on the entered information.
+3. If I input incomplete or invalid data into the BMI calculator,
+then I should receive clear error messages guiding me to provide the necessary information.
+
 ## Built With
 
 [![Ruby][Ruby]][Ruby-url]
