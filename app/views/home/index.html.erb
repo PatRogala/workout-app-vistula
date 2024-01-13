@@ -1,4 +1,8 @@
 <div class="h-min-screen w-[90%] mx-auto mt-[100px]">
+  <div class="mb-8 py-5 flex flex-wrap text-black bg-blue-500 flex-col items-center">
+    <h2 class="text-3xl font-bold mb-5">Do you drink water?</h2>
+    <p class="text-xl">You need to drink at least <%= current_user.daily_water_intake %> liters of water per day.</p>
+  </div>
   <div class="gap-4 flex flex-wrap flex-col md:flex-row">
     <div class="bg-[#b3f180] p-5 rounded md:max-w-[400px] lg:max-w-[25%] w-full">
       <%= render 'shared/bmi' %>
