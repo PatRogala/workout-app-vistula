@@ -1,25 +1,25 @@
 <div class="h-min-screen w-[90%] mx-auto mt-[100px]">
   <div class="mb-8 py-5 flex flex-wrap text-black bg-blue-500 flex-col items-center">
     <h2 class="text-3xl font-bold mb-5">Do you drink water?</h2>
-    <p class="text-xl">You need to drink at least <%= current_user.daily_water_intake %> liters of water per day.</p>
+    <p class="text-xl">You need to drink at least <b><%= current_user.daily_water_intake %> liters</b> of water per day.</p>
   </div>
   <div class="gap-4 flex flex-wrap flex-col md:flex-row">
-    <div class="bg-[#b3f180] p-5 rounded md:max-w-[400px] lg:max-w-[25%] w-full">
+    <div class="bg-[#b3f180] p-5 rounded md:max-w-[400px] lg:max-w-[30%] w-full">
       <%= render 'shared/bmi' %>
     </div>
 
-    <div class="bg-[#b96346] p-5 rounded md:max-w-[400px] lg:max-w-[25%] w-full">
+    <div class="bg-[#b96346] p-5 rounded md:max-w-[400px] lg:max-w-[30%] w-full">
       <%= render 'shared/bmr' %>
     </div>
 
-    <div class="p-5 rounded md:max-w-[400px] lg:max-w-[47%] w-full">
+    <div class="p-5 rounded md:max-w-[400px] lg:max-w-[37%] w-full">
       <%= render 'shared/macro_demand' %>
     </div>
   </div>
 
   <div class="mt-8 bg-gray-900 p-5 rounded">
-    <h2 class="text-2xl font-semibold mb-4">Recipes</h2>
-    <!-- Food items can go here -->
+    <h2 class="text-2xl font-semibold mb-4">Daily Recipe</h2>
+    <%= render 'shared/recipe', recipe: Recipe.daily %>
   </div>
 
   <div class="mt-8 bg-gray-900 p-5 rounded">
