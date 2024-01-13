@@ -1,17 +1,17 @@
 <div class="flex items-center justify-between flex-col md:flex-row text-xl">
-  <div>
+  <div class="w-full">
     <h3 class="text-xl font-semibold mb-4 text-yellow-300"><%= recipe.name %></h3>
     <img src="<%= recipe.image %>" alt="<%= recipe.name %>" class="rounded max-h-[100px]">
   </div>
-  <div>
+  <div class="w-full">
     <p class="text-yellow-400">Description</p>
     <p><%= recipe.description %></p>
   </div>
-  <div>
+  <div class="w-full">
     <p class="text-yellow-400">Ingredients</p>
     <p><%= recipe.ingredients %></p>
   </div>
-  <div>
+  <div class="w-full">
     <p class="text-yellow-400">Directions</p>
     <p><%= recipe.directions %></p>
   </div>

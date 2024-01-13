@@ -1,0 +1,18 @@
+<div class="flex items-center justify-between flex-col md:flex-row text-xl">
+  <div class="w-full">
+    <h3 class="text-xl font-semibold mb-4 text-yellow-300"><%= workout.name %></h3>
+    <img src="<%= workout.image %>" alt="<%= workout.name %>" class="rounded max-h-[100px]">
+  </div>
+  <div class="w-full">
+    <p class="text-yellow-400">Description</p>
+    <p><%= workout.description %></p>
+  </div>
+  <div class="w-full">
+    <p class="text-yellow-400">Exercises</p>
+    <p><%= workout.exercises %></p>
+  </div>
+  <div class="w-full">
+    <p class="text-yellow-400">Directions</p>
+    <p><%= workout.directions %></p>
+  </div>
+</div>

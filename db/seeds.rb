@@ -30,3 +30,27 @@ Recipe.create!(
   directions: "Cook dough. Cook sauce. Combine.",
   image: "https://s3.przepisy.pl/przepisy3ii/img/variants/800x0/domowa-pizza748835.jpg"
 )
+
+Workout.create!(
+  name: "Pushups",
+  description: "A simple pushup workout.",
+  exercises: "Pushups",
+  directions: "Do pushups.",
+  image: "https://cdn.mos.cms.futurecdn.net/oYDbf5hQAePHEBNZTQMXRA.jpg"
+)
+
+Workout.create!(
+  name: "Situps",
+  description: "A simple situp workout.",
+  exercises: "Situps",
+  directions: "Do situps.",
+  image: "https://hips.hearstapps.com/hmg-prod/images/2021-runnersworld-weekendworkouts-ep41-situps-jc-v03-index-1633617537.jpg?crop=0.476xw:0.427xh;0.270xw,0.526xh&resize=1200:*"
+)
+
+Workout.create!(
+  name: "Squats",
+  description: "A simple squat workout.",
+  exercises: "Squats",
+  directions: "Do squats.",
+  image: "https://hips.hearstapps.com/hmg-prod/images/squat-jump-squat-178-1653334247.jpg?crop=0.859xw:0.646xh;0.0481xw,0.342xh&resize=1200:*"
+)
