@@ -5,7 +5,7 @@ databases:
     plan: free
 
 services:
-  - type: workout-app
+  - type: web
     name: workout-app
     runtime: ruby
     plan: free
