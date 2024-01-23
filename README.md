@@ -7,6 +7,7 @@
 
 # About The Project
 WorkoutApp is a comprehensive tool that integrates functionality related to diet, physical activity, and overall well-being, allowing users to take a comprehensive approach to healthy living.
+It can be reached under https://workout-app-ls99.onrender.com/
 
 The app allows users to create an account and log in to personalize their workout and diet experience. In the account editing panel, users can enter data such as height, weight, gender, and age, which is key to providing personalized information.
 The app offers a BMI (Body Mass Index) calculator that assesses weight-to-height ratios, helping users understand their current health situation. In addition, the BMR (Basal Metabolic Rate) calculator calculates basal metabolism which is the amount of energy required for the body's basic functions at rest. Based on this, the app also calculates basal caloric requirements and macronutrient ratios (proteins, carbohydrates, fats), allowing users to adjust their diets to meet their goals.
@@ -18,11 +19,8 @@ The app offers a BMI (Body Mass Index) calculator that assesses weight-to-height
 - **BMI Calculator:** An assessment of weight-to-height ratio, helping users understand their current health situation.
 - **BMI Calculator:** Calculation of basal metabolism, which determines the amount of energy required for basic bodily functions at rest.
 - **Basic Caloric Requirements and Macronutrients:** Provides information on basic caloric requirements and macronutrient ratios (proteins, carbohydrates, fats) based on user data.
-
-## Planned expansions
-The project plans to introduce two new panels:
-- **Panel with recipes:** Will allow users to access healthy recipes according to their caloric needs and dietary preferences.
-- **Exercise panel:** Will provide users with the ability to plan and execute a variety of workouts, taking into account their fitness level and goals.
+- **Panel with recipes:** Every day draw a healthy and wholesome meal with a description, needed ingredients, and directions.
+- **Exercise panel:** Every day draws an exercise with a description, needed ingredients and directions.
 
 ### Technical elements of the application:
 The application model consists of:
